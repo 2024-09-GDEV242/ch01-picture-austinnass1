@@ -6,8 +6,8 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @Austin Nass  
+ * @version 2024.09.10
  */
 public class Picture
 {
@@ -16,6 +16,9 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private boolean drawn;
+    private Square chimney;
+    private Square door;
+    private Person person;
 
     /**
      * Constructor for objects of class Picture
@@ -26,6 +29,9 @@ public class Picture
         window = new Square();
         roof = new Triangle();  
         sun = new Circle();
+        chimney = new Square();
+        door = new Square();
+        person = new Person();
         drawn = false;
     }
 
@@ -56,6 +62,24 @@ public class Picture
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+            
+            chimney.changeColor("black");
+            chimney.moveHorizontal(-70);
+            chimney.moveVertical(20);
+            chimney.changeSize(60);
+            chimney.makeVisible();
+            
+            door.changeColor("blue");
+            door.moveHorizontal(190);
+            door.moveVertical(180);
+            door.changeSize(60);
+            door.makeVisible();
+            
+            person.changeColor("magenta");
+            person.moveHorizontal(340);
+            person.moveVertical(198);
+            person.makeVisible();
+            
             drawn = true;
         }
     }
@@ -69,6 +93,9 @@ public class Picture
         window.changeColor("white");
         roof.changeColor("black");
         sun.changeColor("black");
+        chimney.changeColor("black");
+        door.changeColor("white");
+        person.changeColor("black");
     }
 
     /**
@@ -80,5 +107,8 @@ public class Picture
         window.changeColor("black");
         roof.changeColor("green");
         sun.changeColor("yellow");
+        chimney.changeColor("black");
+        door.changeColor("blue");
+        person.changeColor("magenta");
     }
 }
